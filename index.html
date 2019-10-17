@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link href = "StyleSheet.css" rel = "stylesheet">
+        <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+        <title>Retro Mondrian</title>
+    </head>
+    <body>
+        <a-scene>
+            <a-assets>
+                <img id = "textureY" src = "IMGs/yellow.jpg" />
+                <img id = "textureR" src = "IMGs/red.jpg" />
+                <img id = "textureB" src = "IMGs/blue.jpg" />
+                <img id = "textureG" src = "IMGs/grey.jpg" />
+                <img id = "textureBl" src = "IMGs/black.jpg" />
+            </a-assets>
+            <a-camera position = "5 4 13" scale = ".1 .1 .1" rotation = "20 20 0">
+                <a-curser></a-curser>
+            </a-camera>
+            <a-entity id = "mouseCursor" cursor = "rayOrigin: mouse"></a-entity>
+            <a-sky color = "#c8e3e8"></a-sky>
+            <!--Background Boxes-->
+            <a-box 
+                   color = "#000000"
+                   width = ".5" height = "8" depth = "8"
+                   position = "0 4 -.5" rotation = "0 -90 0"
+                   animation__click = "property:components.material.material.opacity; rom: 1; to: 0; startEvents: click; dur: 500;"
+                   >
+            </a-box>
+            <!--Yellow Boxes-->
+            <a-box
+                   src = "#textureY" 
+                   width = "1" height = "2" depth = "1" 
+                   position = "-3.5 1 .5" rotation = "0 -90 0"
+                    animation="property: material.opacity;
+                    from: 1;
+                    to: 0;
+                    loop: true;
+                    dir:alternate;
+                    dur: 500;">
+            </a-box>
+            <a-box 
+                   src = "#textureY"
+                   width = "1" height = "1.6" depth = "1.5"
+                   position = "3.2 6.5 .5" rotation = "0 -90 0"
+                    animation="property: material.opacity;
+                    from: 1;
+                    to: 0;
+                    loop: true;
+                    dir:alternate;
+                    dur: 500;">
+            </a-box>
+            <a-box 
+                   src = "#textureY"
+                   width = "1" height = ".6" depth = "1.5"
+                   position = "3.2 7.7 .5" rotation = "0 -90 0"
+                    animation="property: material.opacity;
+                    from: 1;
+                    to: 0;
+                    loop: true;
+                    dir:alternate;
+                    dur: 500;">
+            </a-box>
+            <!--Black Boxes-->
+            <a-box src = "#textureBl"
+                   width = "1.5" height = "2" depth = "2"
+                   position = "-1.5 2.5 .75" rotation = "0 -90 0"
+                    animation="property: position;
+                           from:-1.5 2.5 -.75;
+                           to: -1.5 2.5 .75;
+                           loop:true;
+                           dir:alternate;"
+                   >
+            </a-box>
+            <a-box src = "#textureBl"
+                   width = "1" height = ".5" depth = "2"
+                   position = "1 1.8 .5" rotation = "0 -90 0"
+                   animation="property: position;
+                           from:1 1.8 .5;
+                           to: 1 1.8 -.5;
+                           loop:true;
+                           dir:alternate;">
+            </a-box>
+            <!--Blue Boxes-->
+            <a-box src = "#textureB"
+                   width = "1" height = "1.3" depth = "1.5"
+                   position = "3.2 2.2 .5" rotation = "0 -90 0"
+                   animation="property:scale;
+                   from: .3 .3 .3;
+                   to: 1 1 1;
+                   loop:true;
+                   dir: alternate;
+                   "
+                   >
+            </a-box>
+            <!--White Boxes-->
+            <a-box src ="#textureG"
+                   width = "2" height = "1" depth = "2"
+                   position = "-1.5 .5 1" rotation = "0 -90 0">
+            </a-box>
+            <a-box src ="#textureG"
+                   width = "1" height = "1" depth = "4"
+                   position = "2 .5 .5" rotation = "0 -90 0">
+            </a-box>
+            <a-box src ="#textureG"
+                   width = "1.5" height = ".5" depth = "2"
+                   position = "1 2.5 .75" rotation = "0 -90 0">
+            </a-box>
+            <a-box src ="#textureG"
+                   width = "1" height = ".5" depth = "2"
+                   position = "1 3.2 .5" rotation = "0 -90 0">
+            </a-box>
+            <a-box src ="#textureG"
+                   width = "1" height = "3" depth = "1"
+                   position = "-3.5 3.9 .5" rotation = "0 -90 0">
+            </a-box>
+            <a-box src ="#textureG"
+                   width = "2" height = "1.5" depth = "1"
+                   position = "-3.5 6.5 1" rotation = "0 -90 0">
+            </a-box>
+            <a-box src ="#textureG"
+                   width = "1" height = ".5" depth = "1.5"
+                   position = "3.2 3.2 .5" rotation = "0 -90 0">
+            </a-box>
+            <a-box src ="#textureG"
+                   width = "1.5" height = "1.5" depth = "0.6"
+                   position = "2.75 4.5 .75" rotation = "0 -90 0">
+            </a-box>
+            <a-box src ="#textureG"
+                   width = "1" height = "1.5" depth = ".6"
+                   position = "3.6 4.5 .5" rotation = "0 -90 0">
+            </a-box>
+            <a-box src ="#textureG"
+                   width = "1" height = ".6" depth = "2"
+                   position = "-3 7.7 .5" rotation = "0 -90 0">
+            </a-box>
+            <a-box src ="#textureG"
+                   width = "1.5" height = ".6" depth = "3.5"
+                   position = ".1 7.7 .75" rotation = "0 -90 0">
+            </a-box>
+            <!--Red Boxes-->
+            <a-box src = "#textureR"
+                   width = "2" height = "3.5" depth = "4.3"
+                   position = "-.3 5.5 1" rotation = "0 -90 0"
+                   animation = "property:rotation; to: 0 360 0;  loop: true;">
+            </a-box>
+            <a-plane color = "#734921"
+                     height = "100" width = "100" position = "0 0 0" rotation = "-90 0 0"
+                     animation__click1 = "property:components.material.material.color; type: color; from: #734921; to: #369635; startEvents: click; dur: 500;"
+                     animation__click2 = "property:components.material.material.color; type: color; to: #734921; from: #369635; startEvents: click; dur: 500;">
+            </a-plane>
+        </a-scene>
+    </body>
+</html>
